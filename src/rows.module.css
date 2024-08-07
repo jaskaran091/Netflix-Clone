@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+  margin-bottom: 50px;
+  color: white;
+}
+.row {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+.img {
+  height: 18vh;
+  margin-right: 7px;
+  transition: transform 0.5s;
+}
+.row::-webkit-scrollbar {
+  display: none;
+}
+.img:hover {
+  transform: scale(1.1);
+}
+.container {
+  position: relative;
+  margin: 20px 0;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.scrollButton {
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.leftScrollButton,
+.rightScrollButton {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.leftScrollButton svg,
+.rightScrollButton svg {
+  transition: scale 0.5s;
+}
+.leftScrollButton:hover,
+.rightScrollButton:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s;
+}
+.leftScrollButton:hover svg,
+.rightScrollButton:hover svg {
+  scale: 1.5;
+}
+.leftScrollButton {
+  position: absolute;
+  height: 18vh;
+  left: -3vw;
+  opacity: 0;
+}
+.rightScrollButton {
+  position: absolute;
+  height: 18vh;
+  right: -3vw;
+  top: 5vh;
+  opacity: 0;
+}
+.container:hover .leftScrollButton,
+.container:hover .rightScrollButton {
+  opacity: 1;
+}
+
+@media screen and (max-width: 770px) {
+  .img,
+  .leftScrollButton,
+  .rightScrollButton {
+    height: 13vh;
+  }
+  .container h4 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .img,
+  .leftScrollButton,
+  .rightScrollButton {
+    height: 11vh;
+  }
+  .container h4 {
+    font-size: 1rem;
+  }
+}

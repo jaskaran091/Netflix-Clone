@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  height: 100%;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.526);
+  padding: 50px;
+  position: relative;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+}
+.container .center {
+  width: 82%;
+  margin: auto;
+}
+.container .center ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .center ul li {
+  padding: 10px 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  width: 18vw;
+  text-decoration: underline;
+  text-align: left;
+}
+.container .center select {
+  height: 4.8vh;
+  width: 8vw;
+  background-color: transparent;
+  color: white;
+  border: 3px double white;
+  border-radius: 5px;
+  font-weight: 550;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+}
+.container .center option {
+  color: black;
+  font-weight: 550;
+}
+.container .center h5 {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container .center select {
+    width: 23px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container h3 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 10px;
+  }
+  .container .center {
+    width: 100%;
+  }
+  .container .center ul li {
+    width: 46.6vw;
+  }
+}

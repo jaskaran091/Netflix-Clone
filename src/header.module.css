@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+  height: 10vh;
+  background-image: linear-gradient(to bottom, black, transparent);
+  position: fixed;
+  color: white;
+  padding: 20px;
+  display: flex;
+  z-index: 2;
+}
+.container .leftIcon {
+  fill: red;
+  z-index: 1;
+  padding-left: 30px;
+}
+.container .left {
+  display: flex;
+  position: relative;
+  left: 50px;
+}
+.container .left ul {
+  z-index: 1;
+  display: flex;
+  list-style-type: none;
+}
+.container .left ul li {
+  padding: 0 10px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.container .right ul {
+  position: absolute;
+  z-index: 1;
+  right: 60px;
+  display: flex;
+  list-style-type: none;
+}
+.container .right ul li {
+  padding: 0 10px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+}
+.container .right ul li svg {
+  fill: white;
+}
+.container .right ul li img {
+  margin-right: 10px;
+}
+.container .right ul li .arrow {
+  transition: all 2sec;
+}
+.container .right ul li:last-child:hover .arrow {
+  transform: rotateX(180deg);
+}
+.container .dropdown {
+  background-color: black;
+  color: aliceblue;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  z-index: 1;
+  display: none;
+}
+.container .right ul li button {
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+}
+.more {
+  display: none;
+  position: relative;
+}
+.options {
+  display: grid;
+  position: absolute;
+  top: 30px;
+  display: none;
+}
+.options .btns {
+  width: 150px;
+  gap: 0;
+  margin-bottom: 0;
+  background-color: #fff;
+  color: black;
+}
+.more span {
+  font-size: 1.2rem;
+  color: white;
+  margin-right: 10px;
+}
+.container .left .more svg {
+  height: 20px;
+}
+.show {
+  display: block;
+}
+@media screen and (max-width: 1080px) {
+  .container .right ul li {
+    padding: 0 5px;
+  }
+  .container .left ul li {
+    padding: 0 5px;
+  }
+  .container .right ul {
+    right: 0px;
+  }
+  .container .left ul {
+    left: 140px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .container .left ul {
+    display: none;
+  }
+  .container .left .more {
+    display: block;
+  }
+
+  .container .left {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 950px) {
+  .show {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .left {
+    left: 10px;
+  }
+  .container .left .more span {
+    font-size: 0.9rem;
+  }
+  .container .left .more svg {
+    height: 15px;
+  }
+  .container .leftIcon {
+    padding: 0;
+    height: 20px;
+  }
+  .container .right ul li:nth-child(2) {
+    display: none;
+  }
+  .container .right ul li {
+    padding: 0 3px;
+  }
+}

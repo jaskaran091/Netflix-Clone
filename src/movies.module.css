@@ -1,0 +1,12 @@
+.allRows {
+  position: relative;
+  top: -150px;
+  padding: 50px;
+  background-image: linear-gradient(to bottom, transparent 0%, #141414 5%);
+}
+
+@media screen and (max-width: 550px) {
+  .allRows {
+    padding: 50px 10px;
+  }
+}

@@ -1,0 +1,65 @@
+.container {
+  height: 20vh;
+  background-color: #141414;
+  color: rgba(255, 255, 255, 0.627);
+  position: relative;
+  top: -150px;
+  display: grid;
+  place-content: center;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+}
+
+.bottom ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 10px 100px;
+  width: 60vw;
+}
+.container .bottom ul li {
+  padding: 10px 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  width: 10vw;
+  text-decoration: underline;
+  text-align: left;
+}
+.icons {
+  display: flex;
+  gap: 30px;
+}
+button {
+  width: 90px;
+  font-size: 0.9rem;
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.526);
+  color: rgba(255, 255, 255, 0.526);
+  height: 4vh;
+  margin-bottom: 10px;
+}
+span {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.526);
+}
+
+@media screen and (max-width: 1500px) {
+  .container {
+    top: -120px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    top: -100px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .container {
+    top: -60px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .container {
+    top: 0px;
+  }
+}
