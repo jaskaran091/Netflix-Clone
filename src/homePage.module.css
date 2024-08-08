@@ -281,7 +281,10 @@ input[type="password"] {
   font-size: 0.7rem;
   color: blue;
 }
-
+.getStarted .center .box button svg {
+  height: 20px;
+  width: 20px;
+}
 @media screen and (max-width: 320px) {
   .getStarted .header .heading svg {
     width: 5.5625rem;
@@ -348,5 +351,24 @@ input[type="password"] {
   }
   .SigninCenter footer {
     width: 200px;
+  }
+  .getStarted .center .box input[type="email"] {
+    width: 230px;
+    height: 6vh;
+  }
+  .getStarted .center .box button {
+    width: 120px;
+    height: 6vh;
+    font-size: 1rem;
+  }
+  .getStarted .center .box button svg {
+    height: 15px;
+    width: 15px;
+  }
+  .getStarted .center h1 {
+    font-size: 1.5rem;
+  }
+  .getStarted .center p {
+    font-size: 1rem;
   }
 }

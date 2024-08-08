@@ -1,38 +1,32 @@
-import style1 from "./blackBox.module.css";
+import style from "./blackBox.module.css";
 
 function BlackBox({ item }) {
   return (
     <div
-      className={style1.container}
-      style={{ flexDirection: `${item.id % 2 === 0 ? "row" : "row-reverse"}` }}
+      className={style.container`${
+        item.id % 2 === 0 ? style.row : style.rowRev
+      }`}
     >
-      <div className={item.id % 2 === 0 ? style1.text : style1.revText}>
+      <div className={item.id % 2 === 0 ? style.text : style.revText}>
         <h1>{item.content.h1}</h1>
         <p>{item.content.p}</p>
       </div>
-      <div className={style1.img1}>
-        <img
-          src={item.img}
-          className={item.id % 2 === 0 ? style1.img : style1.revImg}
-        />
-        {item.id === 1 && (
-          <div className={style1.strange}>
-            <img src={item.img2} />
-            <div className={style1.strangeText}>
-              Stranger Things <p>Downloading...</p>
-            </div>
-          </div>
-        )}
-        <div className={item.id === 0 ? style1.video : style1.video3}>
-          <video
-            data-uia="nmhp-card-animation-asset-video"
-            autoPlay
-            playsInline
-            muted
-            loop
-          >
-            <source src={item.video} type="video/mp4" />
-          </video>
+      <div className={style.img}>
+        <div className={style.wrapper}>
+          <img src={item.img} alt="" />
+
+          {(item.id === 0 || item.id === 2) && (
+            <video
+              data-uia="nmhp-card-animation-asset-video"
+              autoPlay
+              playsInline
+              muted
+              loop
+              className={item.id === 0 ? style.video : style.video2}
+            >
+              <source src={item.video} type="video/mp4" />
+            </video>
+          )}
         </div>
       </div>
     </div>

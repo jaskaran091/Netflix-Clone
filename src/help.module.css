@@ -69,5 +69,12 @@
   }
   .container .center ul li {
     width: 46.6vw;
+    font-size: 0.8rem;
+  }
+  .container .center h3 {
+    font-size: 1rem;
+  }
+  .container .center h5 {
+    font-size: 1rem;
   }
 }

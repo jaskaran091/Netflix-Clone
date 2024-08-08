@@ -11,195 +11,93 @@
   font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
     sans-serif;
 }
+.row {
+  flex-direction: row;
+}
+.rowRev {
+  flex-direction: row-reverse;
+}
 .container .text {
-  color: white;
   width: 50%;
-  text-align: left;
+  color: white;
   margin: auto;
   text-wrap: wrap;
-}
-.container .revText {
-  color: white;
-  width: 50%;
-  font-size: 1.5rem;
-  text-align: left;
-  margin: auto;
-  text-wrap: wrap;
-  padding-right: 150px;
-}
-.container .revText h1 {
-  font-size: 1.5rem;
-}
-.container .revText p {
-  font-size: 1rem;
+  padding-left: 10vw;
 }
 .container .text h1 {
-  margin-left: 25%;
-  font-size: 1.5rem;
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 .container .text p {
-  margin-left: 25%;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
-.container .img1 {
+.container .revText {
   width: 50%;
-  padding-top: 7%;
-  position: relative;
-}
-
-.container .img {
-  position: absolute;
-  z-index: 2;
-  width: 90%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.container .revImg {
-  position: absolute;
-  width: 61%;
-  top: 20%;
-  z-index: 2;
-  left: 20%;
-}
-.container .img1 .video {
-  position: relative;
-  left: 17vw;
-  top: 16vh;
-  width: 66%;
-  height: 56%;
-}
-.container .img1 .video3 video {
-  position: relative;
-  left: 20vw;
-  top: 9vh;
-  width: 57%;
-}
-.container .img1 .video video {
-  width: 100%;
-  height: 100%;
-}
-/* .container .img1 .video3 video {
-  width: 100%;
-  height: 100%;
-} */
-.container .strange {
-  height: 16%;
-  width: 32%;
-  background: #000000;
-  position: absolute;
-  top: 72%;
-  left: 35%;
-  z-index: 3;
-  border: 2px solid gray;
-  border-radius: 10px;
-  display: flex;
-}
-.container .strange img {
-  height: 10vh;
-  margin: 1vh 10px;
-}
-.container .strange .strangeText {
   color: white;
   margin: auto;
-  font-size: 0.8rem;
+  text-wrap: wrap;
+  padding-right: 10vw;
 }
-.container .strange .strangeText p {
-  color: blue;
-  font-size: 0.7rem;
+.container .revText h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
-@media screen and (min-width: 1024px) {
+.container .revText p {
+  font-size: 1.5rem;
+}
+.container .img {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.container .img .wrapper {
+  position: relative;
+  width: 73%;
+  height: 87%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.wrapper img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+}
+.wrapper .video {
+  width: 74%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  left: 13%;
+  padding-top: 15%;
+}
+.wrapper .video2 {
+  width: 64%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  left: 19%;
+  padding-top: 6%;
+}
+
+@media screen and (max-width: 1024px) {
   .container .text h1 {
     font-size: 2.5rem;
-  }
-  .container .text p {
-    font-size: 1.5rem;
   }
   .container .revText h1 {
     font-size: 2.5rem;
   }
-  .container .revText p {
-    font-size: 1.5rem;
-  }
-  .container .strange .strangeText {
-    font-size: 1rem;
-  }
-  .container .strange .strangeText p {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
   .container {
-    height: 100vh;
-    flex-direction: column !important;
-  }
-  .container .text {
-    width: 100%;
-    height: 20%;
-    padding-top: 30px;
-    text-align: center;
-  }
-  .container .revText {
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    padding: 30px 0 0 0;
-  }
-  .container .img1 {
-    width: 100%;
-    height: 80%;
-    padding: 0;
-  }
-  .container .text h1 {
-    margin-left: 0%;
-  }
-  .container .text p {
-    margin-left: 0%;
-  }
-  .container .strange .strangeText {
-    font-size: 1rem;
-  }
-  .container .strange .strangeText p {
-    font-size: 1rem;
+    height: 60vh;
   }
 }
-
-@media screen and (min-width: 769px) {
-  .container .img1 .img {
-    width: 61%;
-  }
-  .container .img1 .video {
-    left: 28%;
-    position: absolute;
-    height: 54%;
-    top: 22%;
-    width: 46%;
-    z-index: 1;
-    overflow: hidden;
-  }
-  .container .img1 .video3 video {
-    left: 30%;
-    position: absolute;
-    height: 29%;
-    top: 23%;
-    width: 38%;
-    z-index: 1;
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 950px) {
   .container {
-    height: 75vh;
-  }
-  .container .img1 .video {
-    left: 17%;
-    position: absolute;
-    height: 54%;
-    top: 22%;
-    width: 65%;
-    z-index: 1;
-    overflow: hidden;
+    flex-direction: column;
   }
 }
