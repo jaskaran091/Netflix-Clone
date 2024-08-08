@@ -14,6 +14,20 @@ function BlackBox({ item }) {
       <div className={style.img}>
         <div className={style.wrapper}>
           <img src={item.img} alt="" />
+          {item.id === 1 && (
+            <div className={style.strange}>
+              <div className={style.strangeImg}>
+                <img
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
+                  alt=""
+                />
+              </div>
+              <div className={style.strangeText}>
+                <h6>Stranger Things</h6>
+                <p>Downloading...</p>
+              </div>
+            </div>
+          )}
 
           {(item.id === 0 || item.id === 2) && (
             <video

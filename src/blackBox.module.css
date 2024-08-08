@@ -84,6 +84,34 @@
   left: 19%;
   padding-top: 6%;
 }
+.container .img .wrapper .strange {
+  background-color: #000000d1;
+  width: 58%;
+  height: 90px;
+  position: absolute;
+  z-index: 2;
+  left: 21%;
+  margin-top: 55%;
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  padding: 5px 1vw;
+}
+.container .img .wrapper .strange .strangeImg {
+  width: 65px;
+}
+.container .img .wrapper .strange .strangeImg img {
+  height: 80px;
+  width: 50px;
+}
+.container .img .wrapper .strange .strangeText {
+  color: white;
+  margin: auto;
+  padding-top: 10px;
+}
+.container .img .wrapper .strange .strangeText p {
+  color: blue;
+}
 
 @media screen and (max-width: 1024px) {
   .container .text h1 {
@@ -100,6 +128,12 @@
   }
   .container .revText p {
     font-size: 1.2rem;
+  }
+  .container .img .wrapper .strange .strangeText h6 {
+    font-size: 0.9rem;
+  }
+  .container .img .wrapper .strange .strangeText p {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 950px) {
@@ -151,10 +185,28 @@
     width: 55%;
     height: 100%;
   }
+  .container .img .wrapper .strange {
+    height: 70px;
+  }
+  .container .img .wrapper .strange .strangeImg img {
+    height: 60px;
+  }
 }
 @media screen and (max-width: 600px) {
   .container .img {
     height: 65%;
+  }
+  .container .img .wrapper .strange {
+    height: 60px;
+  }
+  .container .img .wrapper .strange .strangeImg img {
+    height: 50px;
+  }
+  .container .img .wrapper .strange .strangeText h6 {
+    margin-bottom: 0;
+  }
+  .container .img .wrapper .strange .strangeText {
+    padding: 0 10px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -175,5 +227,20 @@
   }
   .container .img .wrapper {
     width: 70%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container .img .wrapper .strange {
+    height: 50px;
+  }
+  .container .img .wrapper .strange .strangeImg img {
+    height: 40px;
+    width: 35px;
+  }
+  .container .img .wrapper .strange .strangeText h6 {
+    font-size: 0.7rem;
+  }
+  .container .img .wrapper .strange .strangeText p {
+    font-size: 0.6rem;
   }
 }
