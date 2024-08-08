@@ -3,7 +3,7 @@ import style from "./blackBox.module.css";
 function BlackBox({ item }) {
   return (
     <div
-      className={style.container`${
+      className={`${style.container} ${
         item.id % 2 === 0 ? style.row : style.rowRev
       }`}
     >

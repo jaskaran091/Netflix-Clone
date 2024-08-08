@@ -360,6 +360,7 @@ input[type="password"] {
     width: 120px;
     height: 6vh;
     font-size: 1rem;
+    margin-top: 10px;
   }
   .getStarted .center .box button svg {
     height: 15px;
@@ -370,5 +371,8 @@ input[type="password"] {
   }
   .getStarted .center p {
     font-size: 1rem;
+  }
+  .getStarted .center {
+    list-style: 0;
   }
 }
